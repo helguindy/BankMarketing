@@ -103,16 +103,6 @@ This makes the project ideal for learning the true mechanics behind neural netwo
 
 ---
 
-## 🔗 **Why a Neural Network?**
-
-A neural network is appropriate because:
-
-- The dataset contains a **mix of categorical + numerical features**
-- Relationships between features and subscription behavior are **non-linear**
-- NN can capture complex interactions (e.g., between age, job, previous outcome, and call duration)
-- NN can outperform linear models when patterns are non-linear or multi-dimensional
-
-
 # 🧠 Neural Network Architecture
 
 Network structure:  
@@ -221,20 +211,6 @@ $$\text{MAE} = \frac{1}{m} \sum_{i=1}^{m} E_{i}$$
 #### **Compute Accuracy**
 The final accuracy is defined as the complement of the mean absolute error:
 $$\text{Accuracy} = 1 - \text{MAE}$$
-
----
-
-## 💵 Pipeline
-
-The training script performs:
-
-1. Load and preprocess dataset  
-2. Encode categorical features manually  
-3. Normalize numeric features  
-4. Initialize neural network parameters  
-5. Train via forward + backward propagation  
-6. Track loss and accuracy each epoch  
-7. Save training plots  
 
 ---
 
