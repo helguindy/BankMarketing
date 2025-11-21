@@ -113,23 +113,46 @@ Where:
 
 - **N** = number of processed input features  
 - **Hidden Layer:** 10 neurons  
-- **Activation:** sigmoid (implemented manually)  
+- **Activation:** reLU (implemented manually)  
 - **Output Layer:** 1 neuron with **sigmoid activation** (binary classification)
 
 
-**Sigmoid (used in both hidden and output layers):**
+**Sigmoid (used in output layer):**
 
 $$\begin{aligned} A &= \frac{1}{1 + e^{-Z}} \\ 
 A' &= A \cdot (1 - A) \end{aligned}$$
+
+**ReLU (used in hidden layer):**
+
+$$
+\begin{aligned} 
+A &= \max(0, Z) \\ 
+A' &= 
+\begin{cases} 
+1 & \text{if } Z > 0 \\ 
+0 & \text{otherwise} 
+\end{cases} 
+\end{aligned}
+$$
 
 
 ## 🚀 Forward Propagation
 
 ### **Hidden Layer**
-$$\begin{aligned} Z_1 &= W_1 \cdot X + b_1 \\ A_1 &= \text{sigmoid}(Z_1) \end{aligned}$$
+$$
+\begin{aligned} 
+Z_1 &= W_1 \cdot X + b_1 \\ 
+A_1 &= \text{ReLU}(Z_1) 
+\end{aligned}
+$$
 
 ### **Output Layer**
-$$\begin{aligned} Z_2 &= W_2 \cdot A_1 + b_2 \\ A_2 &= \text{sigmoid}(Z_2) \quad \text{(predicted probability)} \end{aligned}$$
+$$
+\begin{aligned} 
+Z_2 &= W_2 \cdot A_1 + b_2 \\ 
+A_2 &= \text{sigmoid}(Z_2) \quad \text{(predicted probability)} 
+\end{aligned}
+$$
 
 
 ## 🔁 Backpropagation 
