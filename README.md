@@ -212,8 +212,3 @@ $$\text{MAE} = \frac{1}{m} \sum_{i=1}^{m} E_{i}$$
 The final accuracy is defined as the complement of the mean absolute error:
 $$\text{Accuracy} = 1 - \text{MAE}$$
 
----
-
-## 📊 Results
-
----
